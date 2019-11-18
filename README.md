@@ -6,7 +6,7 @@
 Cat or dog? What it is? Train your model and be always able to tell!
 
 ```
-pipenv istall
+pipenv install
 pipenv shell
 python3 ./train.py
 python3 ./validate.py ~/Downloads.cat.jpg
