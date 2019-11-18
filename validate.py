@@ -16,12 +16,15 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 test_image = sys.argv[1]
+model_file = os.path.join(os.path.dirname(
+    os.path.abspath(__file__)), 'catdog.h5')
+
 if (not path.isfile(test_image)):
     print("ERROR: Expected %s to be a file" % test_image, file=sys.stderr)
     sys.exit(1)
 
 
-model = tf.keras.models.load_model('catdog.h5')
+model = tf.keras.models.load_model(model_file)
 
 
 img = load_img(test_image, target_size=(150, 150))
